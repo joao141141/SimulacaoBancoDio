@@ -4,17 +4,19 @@ package banco;
 public class Main {
 
     public static void main(String[] args) {
-        Cliente venilton = new Cliente();
-        venilton.setNome("Venilton");
+        Cliente Carlos = new Cliente();
+        Carlos.setNome("Carlos");
 
-        Conta cc = new ContaCorrente(venilton);
-        Conta poupanca = new ContaPoupanca(venilton);
+        Conta cc = new ContaCorrente(Carlos);
+        Conta poupanca = new ContaPoupanca(Carlos);
 
         cc.depositar(100);
         cc.transferir(100, poupanca);
 
         cc.imprimirExtrato();
         poupanca.imprimirExtrato();
+
+        cc.sacar(50);
     }
 
 }
